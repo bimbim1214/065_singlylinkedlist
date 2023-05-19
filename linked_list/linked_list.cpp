@@ -25,3 +25,16 @@ public:
 list::list() {
 	START = NULL;
 }
+void list::addNode()/*menambahkan sebuah node ke dalam list*/
+{
+	int nim;
+	char nm[20];
+	cout << "\nmemasukkan nomor mahasiswa: ";
+	cin >> nim;
+	cout << "\nmasukkan nama: ";
+	cin >> nm;
+
+	Node* nodeBaru = new Node;
+	nodeBaru->noMhs = nim;
+	strcpy_s(nodeBaru->nama, nm);
+
