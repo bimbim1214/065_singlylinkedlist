@@ -90,3 +90,15 @@ bool list::delNode(int nim)/*menghapus node dari dalam list*/
 }
 
 /*chek apakah node yang di maksud ada didalam list atau tidak*/
+bool list::Search(int nim, Node** previous, Node** current)
+{
+	*previous = START;
+	*current = START;
+	while ((*current != NULL) && (nim != (*current)->noMhs))
+	{
+		*previous = *current;
+		*current = (*current)->next;
+	}
+	return (*current != NULL);
+}
+
